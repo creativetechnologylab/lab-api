@@ -14,7 +14,7 @@ jQuery( document ).ready( function() {
 
 function dataReceived( msg ) {
 	if ( msg.a == path ) {
-		console.log( msg );
 		jQuery( '.data' ).prepend( "<li><strong>" + msg.b + ":</strong> " + JSON.stringify( msg.data ) + "</li>" )
+		jQuery( jQuery( '.data li' ).splice( 5 ) ).remove();
 	}
 }
